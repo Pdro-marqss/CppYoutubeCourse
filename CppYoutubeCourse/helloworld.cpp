@@ -23,7 +23,8 @@ typedef std::string text_t;
 using number_t = int;
 
 int main() {
-	/* Anotaçoes sobre Print em Tela
+
+	/* >>> PRINT EM TELA
 	
 		-std é um namespace padrão da biblioteca C++ que significa 'standard' (padrão).
 		-Cout é o objeto de saída padrão em C++ usado para imprimir dados na tela. Não se le count de contar e 
@@ -39,7 +40,7 @@ int main() {
 
 
 
-	/* Anotaçoes sobre Variaveis e Tipos de Dados
+	/* >>> VARIAVEIS E TIPOS DE DADOS
 
 		.Da pra declarar a variavel e assinar o valor depois ou fazer ambos juntos, como nos exemplos x e y.
 		.int = integer (numero inteiro) // int age = 25;
@@ -70,7 +71,7 @@ int main() {
 
 
 
-	/* Anotaçoes sobre Variaveis constantes
+	/* >>> VARIAVEIS CONSTANTES
 
 		.Uma constante diz ao compilador que o valor da variavel nao pode ser alterado depois de atribuido.
 		.read-only
@@ -84,7 +85,7 @@ int main() {
 
 
 
-	/* Anotaçoes sobre Namespaces
+	/* >>> NAMESPACES
 
 		.Namespace é uma forma de agrupar entidades como classes, objetos e funções sob um nome comum. Evitando
 		  assim conflitso de nomes iguais. Os nomes podem repetir desde que sejam em namespaces diferentes.
@@ -107,7 +108,7 @@ int main() {
 
 
 
-	/* Anotaçoes sobre Typedef e type alias
+	/* TYPEDEF, TYPE ALIAS E USING
 
 		.typedef é uma palavra reservada usada para criar um novo nome (alias) para um tipo de dado existente.
 		  Tornando-se um novo identificador para aquele tipo existente. Ajuda a melhorar a legibilidade do codigo.
@@ -130,6 +131,45 @@ int main() {
 	//usando using
 	number_t minhaIdade = 25;
 	std::cout << "Minha idade: " << minhaIdade << '\n';
+
+
+
+	/* OPERADORES ARITIMETICOS
+
+		.existem: +(adicao), -(subtracao), *(multiplicacao), /(divisao), %(resto).
+		.usando um int caso a divisao tenha valor com ponto, vamos perder o que vem depois do ponto. Para salvar,
+		  precisamos mudar o tipo do valor para double.
+		.Se quiser o valor do resto da divisao, podemos usar o modulo de resto que é %.
+		.Operadores aritimeticos tem uma ordem de execucao. Na equacao, primeiro é executado o que esta em (),
+		  depois multiplicacao e divisao, depois adicao e subtracao
+	*/
+	int students = 20;
+
+	students = students + 2;
+	// OU:
+	students += 2;
+	// OU caso queira adicionar apenas 1 a mais:
+	students++;
+
+	students = students - 2;
+	// OU :
+	students -= 2;
+	// OU caso queira remover apenas 1:
+	students--;
+
+	students = students * 2;
+	students *= 2;
+
+	students = students / 2;
+	students /= 3;
+
+	int resto = students % 2;
+
+	std::cout << "Quantidade de estudantes: " << students << '\n';
+	std::cout << "Resto da divisao de estudantes por 2: " << resto << '\n';
+
+
+
 
 
 
