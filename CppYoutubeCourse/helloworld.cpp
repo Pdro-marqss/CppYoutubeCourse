@@ -1,5 +1,16 @@
 #include <iostream>
 
+namespace first {
+	// Declarei aqui 2 variaveis com mesmo nome de variaveis declaradas abaixo no codigo.
+	int x = 12;
+	int y = 23;
+}
+
+namespace second {
+	int x = 123;
+	int y = 234;
+}
+
 int main() {
 	/* Anotaçoes sobre Print em Tela
 	
@@ -14,6 +25,8 @@ int main() {
 	*/
 	std::cout << "Hello World!" << '\n';
 	std::cout << "I Like pizza" << '\n';
+
+
 
 	/* Anotaçoes sobre Variaveis e Tipos de Dados
 
@@ -42,6 +55,45 @@ int main() {
 
 	std::string name = "Pedro";
 	std::cout << "My name is: " << name << '\n';
+
+
+
+	/* Anotaçoes sobre Variaveis constantes
+
+		.Uma constante diz ao compilador que o valor da variavel nao pode ser alterado depois de atribuido.
+		.read-only
+		.Em constantes um padrao muito utilizado é definir o nome da variavel com letras maiusculas.
+	*/
+	const double PI = 3.14159;
+	double radius = 10;
+	double circumference = 2 * PI * radius;
+	std::cout << "Circumference: " << circumference << "cm" << '\n';
+
+
+	/* Anotaçoes sobre Namespaces
+
+		.Namespace é uma forma de agrupar entidades como classes, objetos e funções sob um nome comum. Evitando
+		  assim conflitso de nomes iguais. Os nomes podem repetir desde que sejam em namespaces diferentes.
+		.O namespace deve ser criado fora do main. Geralmente no topo do arquivo.
+		.Quando for imprimir o valor, tem que especificar de qual namespace é a variavel, ou ele vai pegar a do
+		  escopo local.
+		.Os 2 pontos :: é o operador de scope resolution operator, usado para acessar membros de um namespace 
+		  ou classe.
+		.Caso no seja declarado um using namespace first, por exemplo, isso significa que aquele namespace esta
+		  sendo usado como padrao, podendo assim remover o prefixo first::.
+		.Um hackzinho que algumas pessoas usam é declarar no topo do arquivo main o using namespace std, assim
+		  nao precisam escrever o prefixo std:: para chamar count, string, etc... Isso nao é recomendado porque
+		  dentro de std existem muitas entidades e isso pode causar conflitos de nomes. Por exemplo, em std
+		  existe o data std::data. Usando o namespace std eu nao poderia criar uma variavel chamada data.
+	*/
+	std::cout << "Variavel x do escopo local: " << x << '\n';
+	std::cout << "Variavel x do namespace first: " << first::x << '\n';
+	std::cout << "Variavel x do namespace second: " << second::x << '\n';
+
+
+
+
+
 
 
 
