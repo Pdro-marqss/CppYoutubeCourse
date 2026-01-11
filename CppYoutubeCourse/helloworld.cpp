@@ -142,6 +142,7 @@ int main() {
 		.Se quiser o valor do resto da divisao, podemos usar o modulo de resto que é %.
 		.Operadores aritimeticos tem uma ordem de execucao. Na equacao, primeiro é executado o que esta em (),
 		  depois multiplicacao e divisao, depois adicao e subtracao
+
 	*/
 	int students = 20;
 
@@ -170,8 +171,34 @@ int main() {
 
 
 
+	/* CONVERSÃO DE TIPO
 
+		.Converte um valor de um tipo de dado para outro.
+		.Existe o tipo implicito, onde o compilador faz a conversao automaticamente.
+		.Existe o tipo explicito, que precisa ser feito manualmente usando (int), (char), etc
+		.Se implicitamente o compilador converter um number com typagem em int, ele devolve uma letra. Isso
+		  porque na tabela ASCII, cada numero corresponde a uma letra ou caractere especial.
+		.Esse tipo de conversao é muito util em alguns casos, como por exemplo quando vamos fazer um calculo
+		  de media (exemplo abaixo). La, quando dividimos 2 inteiros e o resultado é um numero com ponto como
+		  0,83, o compilador faz um truncate na virgula e devolve só o 0, que depois é multiplicado por 100, dando
+		  o resultado de 0. Isso prejudica a operação. Entao para resolver isso nós alteramos o tipo dos inteiros
+		  explicitamente para double, assim preserva a parte decimal e conclui a operaçao.
 
+	*/
+	// Exemplo de conversao implicita
+	int implicito = 3.14; // o compilador vai automaticamente converter 3.14 (double) para 3 (int)
+
+	// Exemplo de conversao explicita
+	double explicito = (int)3.14; // Transforma double 3.14 em int 3.
+
+	// Exemplo de caso de uso (descrito nas anotaçoes acima)
+	int correctAnswers = 8;
+	int numberOfQUestions = 10;
+	// --> Devolve Resultado Errado:
+	// double scorePercentage = correctAnswers / numberOfQUestions * 100;
+	// --> Devolve Resultado Certo:
+	double scorePercentage = (double)correctAnswers / (double)numberOfQUestions * 100;
+	std::cout << "Porcentagem de acerto na prova: " << scorePercentage << "%" << '\n';
 
 
 	system("pause");

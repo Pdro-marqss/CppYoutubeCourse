@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="CppYoutubeCourse/CppYoutubeCourse.vcxproj" />
+  <Project Path="CppYoutubeCourse/CppYoutubeCourse.vcxproj" Id="73c8d767-b0fe-41c4-8bbf-4ae98fea4905" />
 </Solution>
