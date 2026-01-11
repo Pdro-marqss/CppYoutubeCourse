@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 
 namespace first {
 	// Declarei aqui 2 variaveis com mesmo nome de variaveis declaradas abaixo no codigo.
@@ -199,6 +200,41 @@ int main() {
 	// --> Devolve Resultado Certo:
 	double scorePercentage = (double)correctAnswers / (double)numberOfQUestions * 100;
 	std::cout << "Porcentagem de acerto na prova: " << scorePercentage << "%" << '\n';
+
+
+
+	/* INPUT DE USUARIO
+
+		.Ja vimos o cout que é usado para imprimir na tela. Significa character output e é acompanhado
+		  do operador de inserção <<.
+		.Agora vamos ver o cin que é usado para receber input do usuario. Significa character input e 
+		  é acompanhado do operador de extração >>.
+		.Por padrao quando digitamos espaços, o cin considera apenas o primeiro valor antes do espaço.
+		  Para capturar uma linha inteira com espaços, precisamos usar o std::getline(). Essa funcao
+		  precisa do #include<string> no topo do arquivo, ja que ela vem de la.
+		.Um bug que o getline pode apresentar é quando usado depois de um cin. Isso porque o cin
+		  deixa o caractere de nova linha (\n) no buffer, e o getline le esse caractere como uma linha
+		  vazia. Para evitar isso, podemos usar o std::ws no cin. Esse ws elimina os espaços vazios
+		  em branco do buffer antes de ler a linha completa com getline.
+
+	*/
+	std::string userName;
+	int age;
+
+	std::cout << "E qual a sua idade? : ";
+	std::cin >> age;
+
+	std::cout << "Qual o seu nome completo ? : ";
+	std::getline(std::cin >> std::ws, userName);
+
+	std::cout << "Ola " << userName << '\n';
+	std::cout << "Voce tem " << age << " anos de idade" << '\n';
+
+
+
+
+
+
 
 
 	system("pause");
