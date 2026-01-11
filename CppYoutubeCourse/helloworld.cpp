@@ -109,7 +109,7 @@ int main() {
 
 
 
-	/* TYPEDEF, TYPE ALIAS E USING
+	/* >>> TYPEDEF, TYPE ALIAS E USING
 
 		.typedef é uma palavra reservada usada para criar um novo nome (alias) para um tipo de dado existente.
 		  Tornando-se um novo identificador para aquele tipo existente. Ajuda a melhorar a legibilidade do codigo.
@@ -135,7 +135,7 @@ int main() {
 
 
 
-	/* OPERADORES ARITIMETICOS
+	/* >>> OPERADORES ARITIMETICOS
 
 		.existem: +(adicao), -(subtracao), *(multiplicacao), /(divisao), %(resto).
 		.usando um int caso a divisao tenha valor com ponto, vamos perder o que vem depois do ponto. Para salvar,
@@ -172,7 +172,7 @@ int main() {
 
 
 
-	/* CONVERSÃO DE TIPO
+	/* >>> CONVERSÃO DE TIPO
 
 		.Converte um valor de um tipo de dado para outro.
 		.Existe o tipo implicito, onde o compilador faz a conversao automaticamente.
@@ -203,7 +203,7 @@ int main() {
 
 
 
-	/* INPUT DE USUARIO
+	/* >>> INPUT DE USUARIO
 
 		.Ja vimos o cout que é usado para imprimir na tela. Significa character output e é acompanhado
 		  do operador de inserção <<.
