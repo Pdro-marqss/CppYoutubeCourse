@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 namespace first {
 	// Declarei aqui 2 variaveis com mesmo nome de variaveis declaradas abaixo no codigo.
@@ -10,6 +11,16 @@ namespace second {
 	int x = 123;
 	int y = 234;
 }
+
+//palavraChave -> tipo -> novoNome_t
+typedef std::vector<std::pair<std::string, int>> pairlist_t;
+
+// Outro exemplo de typedef para facilitar o uso de strings
+typedef std::string text_t;
+
+// using no lugar de typedef
+//palavraChave -> novoNome_t -> tipo
+using number_t = int;
 
 int main() {
 	/* Anotaçoes sobre Print em Tela
@@ -38,6 +49,7 @@ int main() {
 		.sting = string (é basicamente um objeto que representa uma sequencia de caracteres)
 		  Diferente dos outros, uma string vem do standard, entao precisa do std:: // std::string name = "Pedro";
 		  Em c++ uma string é basicamente um array de chars, por isso nao é um tipo nativo e precisa do std.
+
 	*/
 	int x;
 	x = 5;
@@ -63,11 +75,13 @@ int main() {
 		.Uma constante diz ao compilador que o valor da variavel nao pode ser alterado depois de atribuido.
 		.read-only
 		.Em constantes um padrao muito utilizado é definir o nome da variavel com letras maiusculas.
+
 	*/
 	const double PI = 3.14159;
 	double radius = 10;
 	double circumference = 2 * PI * radius;
 	std::cout << "Circumference: " << circumference << "cm" << '\n';
+
 
 
 	/* Anotaçoes sobre Namespaces
@@ -85,6 +99,7 @@ int main() {
 		  nao precisam escrever o prefixo std:: para chamar count, string, etc... Isso nao é recomendado porque
 		  dentro de std existem muitas entidades e isso pode causar conflitos de nomes. Por exemplo, em std
 		  existe o data std::data. Usando o namespace std eu nao poderia criar uma variavel chamada data.
+
 	*/
 	std::cout << "Variavel x do escopo local: " << x << '\n';
 	std::cout << "Variavel x do namespace first: " << first::x << '\n';
@@ -92,9 +107,29 @@ int main() {
 
 
 
+	/* Anotaçoes sobre Typedef e type alias
 
+		.typedef é uma palavra reservada usada para criar um novo nome (alias) para um tipo de dado existente.
+		  Tornando-se um novo identificador para aquele tipo existente. Ajuda a melhorar a legibilidade do codigo.
+		.Para o exemplo, vou fazer o include do headerfile <vector> no topo do arquivo.
+		.typedef é feito fora do main, geralmente no topo do arquivo.
+		.É comum no final do novo nome do tipo, adicionar _t para indicar que é um tipo.
+		.typedef tem sido substituido pelo using, que funciona melhor com templates.
+		.using também é definido fora do main e no topo do arquivo.
 
+	*/
+	// Sem usar typedef
+	std::vector<std::pair<std::string, int>> pairlistWithoutTypeDef;
+	
+	// Usando typedef
+	pairlist_t pairlistWithTypeDef;
 
+	text_t stringComTypedef = "Esta string usa uma typedef";
+	std::cout << stringComTypedef << '\n';
+
+	//usando using
+	number_t minhaIdade = 25;
+	std::cout << "Minha idade: " << minhaIdade << '\n';
 
 
 
