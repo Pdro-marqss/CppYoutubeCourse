@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cmath>
 
 namespace first {
 	// Declarei aqui 2 variaveis com mesmo nome de variaveis declaradas abaixo no codigo.
@@ -231,6 +232,40 @@ int main() {
 	std::cout << "Voce tem " << age << " anos de idade" << '\n';
 
 
+
+	/* >>> FUNCOES MATEMATICAS IMPORTANTES
+
+		.Funcoes matematicas comuns presentes na biblioteca padrao <cmath>;
+		.Funcao matematica max() retorna o maior valor entre 2 numeros.
+		.Funcao matematica min() retorna o menor valor entre 2 numeros.
+		.Funcao matematica pow() retorna o valor de um numero elevado a uma potencia.
+		.Funcao matematica sqrt() retorna a raiz quadrada de um numero.
+		.Funcao matematica abs() retorna o valor absoluto de um numero (remove o sinal negativo).
+		.Funcao matematica round() arredonda um numero para o inteiro mais proximo.
+		.FUncao matematica ceil() arredonda um numero para cima.
+		.FUncao matematica floor() arredonda um numero para baixo.
+
+	*/	
+	double x2 = 3;
+	double y2 = 4;
+	double z2;
+
+	z2 = std::max(x, y);
+	std::cout << "max(3, 4) = " << z2 << '\n';
+	z2 = std::min(x, y);
+	std::cout << "min(3, 4) " << z2 << '\n';
+	z2 = std::pow(x, y);
+	std::cout << "pow(3, 4) =  " << z2 << '\n';
+	z2 = std::sqrt(y);
+	std::cout << "sqtr(4) = " << z2 << '\n';
+	z2 = std::abs(-20);
+	std::cout << "abs(-20) = " << z2 << '\n';
+	z2 = std::round(3.6);
+	std::cout << "round(3.6) = " << z2 << '\n';
+	z2 = std::ceil(3.6);
+	std::cout << "ceil(3.6) = " << z2 << '\n';
+	z2 = std::floor(3.6);
+	std::cout << "floor(3.6) = " << z2 << '\n';
 
 
 
