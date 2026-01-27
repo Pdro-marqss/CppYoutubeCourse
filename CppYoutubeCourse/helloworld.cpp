@@ -283,7 +283,40 @@ int main() {
 	b = pow(b, 2); // b elevado a 2
 	c = sqrt(a + b); // raiz quadrada de (a elevado a 2 + b elevado a 2)
 
-	std::cout << "Side C: " << c;
+	std::cout << "Side C: " << c << '\n';
+
+
+
+	/* >>> ESTRUTURAS DE CONTROLE IF, ELSE e ELSE IF
+
+		.If é basicamente "se". Caso aquela regra de verdadeiro, ele entra no bloco de código.
+		.Else é basicamente "senão". Caso a regra do if seja falsa, ele entra no bloco de código do else.
+		.Else if é um "se não, se". Ele permite verificar uma nova condição caso a condição do if anterior seja falsa.
+
+	*/
+	int age2;
+
+	std::cout << "Enter your age: " << '\n';
+	std::cin >> age2;
+
+	if (age2 >= 18) {
+		std::cout << "Welcome to the site" << '\n';
+	}
+	else if (age2 <= 0) {
+		std::cout << "You need to born first :)" << '\n';
+	}
+	else {
+		std::cout << "You are not old enough to enter !" << '\n';
+	}
+
+
+
+
+
+
+
+
+
 
 	system("pause");
 
