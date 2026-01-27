@@ -268,9 +268,22 @@ int main() {
 	std::cout << "floor(3.6) = " << z2 << '\n';
 
 
+	// Calculo de hipotenusa (raiz quadrada de a elevado a 2 + b elevado a 2)
+	double a;
+	double b;
+	double c;
 
+	std::cout << "Enter side A: ";
+	std::cin >> a;
 
+	std::cout << "Enter side B: ";
+	std::cin >> b;
 
+	a = pow(a, 2); // a elevado a 2
+	b = pow(b, 2); // b elevado a 2
+	c = sqrt(a + b); // raiz quadrada de (a elevado a 2 + b elevado a 2)
+
+	std::cout << "Side C: " << c;
 
 	system("pause");
 
