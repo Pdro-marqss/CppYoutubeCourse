@@ -365,7 +365,7 @@ int main() {
 
 	/* >>> EXERCICIO: APP DE CALCULADORA
 
-		.Alternativa ao uso de muitos if elses encadeados. Compara um valor com varios casos possiveis.
+		.
 	
 	*/
 	char op; // operador
@@ -407,6 +407,28 @@ int main() {
 	}
 
 	std::cout << "****************************";
+
+
+
+	/* >>> OPERADOR TERNARIO
+
+		.Substitui o uso do if/else em casos simples.
+		.Sintaxe: condição ? valor_se_verdadeiro : valor_se_falso
+
+	*/
+	int grade = 75;
+	grade >= 60 ? std::cout << "You pass!" : std::cout << "You fail!" << "\n";
+
+	int numberTernary = 9;
+	numberTernary % 2 == 1 ? std::cout << "ODD" : std::cout << "EVEN" << "\n";
+
+	bool hungry = true;
+	hungry ? std::cout << "You are hungry" : std::cout << "You are full" << "\n";
+	// Outra forma de escrever:
+	std::cout << (hungry ? "You are hungry" : "You are full");
+
+
+
 
 
 
