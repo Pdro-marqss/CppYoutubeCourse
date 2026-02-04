@@ -414,20 +414,43 @@ int main() {
 
 		.Substitui o uso do if/else em casos simples.
 		.Sintaxe: condição ? valor_se_verdadeiro : valor_se_falso
+		.Caso seja um std::cout, existe outra sintaxe possivel: std::cout << (condição ? valor_se_verdadeiro : valor_se_falso)
 
 	*/
 	int grade = 75;
-	grade >= 60 ? std::cout << "You pass!" : std::cout << "You fail!" << "\n";
+	grade >= 60 ? std::cout << "You pass!" : std::cout << "You fail!" << '\n';
 
 	int numberTernary = 9;
-	numberTernary % 2 == 1 ? std::cout << "ODD" : std::cout << "EVEN" << "\n";
+	numberTernary % 2 == 1 ? std::cout << "ODD\n" : std::cout << "EVEN\n";
 
 	bool hungry = true;
-	hungry ? std::cout << "You are hungry" : std::cout << "You are full" << "\n";
+	hungry ? std::cout << "You are hungry\n" : std::cout << "You are full\n";
 	// Outra forma de escrever:
-	std::cout << (hungry ? "You are hungry" : "You are full");
+	std::cout << (hungry ? "You are hungry\n" : "You are full\n");
 
 
+
+	/* >>> OPERADORES LÓGICOS
+
+		.São usados para combinar ou modificar expressões booleanas.
+		.&& = AND: verifica se ambas as condições são verdadeiras.
+		.|| = OR: verifica se pelo menos uma das condições é verdadeira.
+		.! = NOT: inverte o valor booleano de uma condição.
+
+	*/
+	int temp;
+
+	std::cout << "Enter the temperature: ";
+	std::cin >> temp;
+
+	if (temp > 0 && temp < 30)
+	{
+		std::cout << "The temperature is good!\n";
+	}
+	else 
+	{
+		std::cout << "The temperature is bad!\n";
+	}
 
 
 
